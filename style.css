@@ -1,0 +1,56 @@
+/*selectores*/
+/*selector universal, seleciona todo el documeto html*/
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
+/*selector de etiqueta: seleccionar por h1, li a...*/
+h1{
+    background: rebeccapurple;
+    color: #fff;
+    padding: 10PX;
+}
+a{
+    font-size: 18px;
+    color:green;
+    text-decoration: none;
+}
+footer {
+    color: red;
+}
+/*selector de  id*/
+#descripcion,#titulo{
+    color:rgb(6, 242, 120);
+    border: solid 1px purple;
+    margin: 5px;
+}
+#titulo{
+    background: black;
+    border: 2px dashed greenyellow ;
+}
+
+/*selectores de clase,*/
+.parrafo{
+    color: blue;
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.parrafo1{
+    background-color: green;
+    color: #fff;
+    padding: 10px;
+}
+.parrafo2{
+    background-color: red;
+    color: yellow;
+    padding:20px;
+}
+
+/*selectores de atributo*/
+#usuario form{
+    border: 5px solid blue;
+    margin: 15px;
+    padding: 10px;
+}
