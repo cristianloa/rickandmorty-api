@@ -1,0 +1,115 @@
+/* ejercicio completo con html y css */
+/* 1- crear un documento html y css vinculados
+2- crear una estructura html q cuente con contenedor general, cabecera, menu,  barra lateral, seccion de contenido principal, elementos dentro dell contenedor principal y footer
+3- todo el contenido debe estar dentro del contenedor general
+
+ 
+*/
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#general{
+    /* ancho */
+    width: 1200px;
+    /* centrar */
+    margin: 20px auto 0px;
+    /* borde */
+    border: 1px solid silver;
+}
+#header{
+    /* ancho */
+    width: 100%;
+    /* alto */
+    height: 80px;
+    /* centra horizontal */
+    text-align: center;
+    /* centrar vertical */
+    line-height: 70px;
+    /* fondo color */
+    background: rgba(0, 200, 255, 0.568);
+}
+#menu ul li{
+    /* ordenar elementos uono al lado del otro */
+    -display:inline-block;            
+    /* elementos en bloque*/
+    display: block;
+    /* flotar elementos a la izquierda */
+    float: left;
+    padding: 15px;
+    /* borde elemto del menu linea separadora */
+    border-right: 1px solid grey;
+
+
+}
+#menu ul li a{
+    display:block ;
+    color: rgb(0, 174, 255);
+}
+#menu ul li:hover{
+    background: rgb(0, 174, 255);
+    cursor: pointer;
+}
+#menu ul li:hover a{
+    color:#eee
+}
+ 
+#menu{
+    background-color: #eee;
+}
+/* quitar float desde esta clase */
+.clearfix{
+    float: none;
+    clear: both;
+}
+#contenido{
+    float: left;
+    width: 69%;
+    border: 1px solid red;
+}
+ #contenido > h1{
+    text-align: center;
+    border-bottom: 1px solid rgb(178, 34, 213);
+    padding: 15px;
+    color: brown;
+    line-height: 50px;
+    text-shadow: 1px 1px 20px greenyellow;
+ }
+ #contenido .caja{
+    width: 350px;
+    height: 350px;
+    float: left;
+    border: 5px solid rgb(11, 156, 9);
+    padding: 1px;
+    margin: 20px;
+    text-align: center;
+    line-height: 300px;
+    background-color: rgb(193, 193, 193);
+    box-shadow: 5px 5px 10px gray;
+
+}
+.sombra-interior{
+    box-shadow: 5px 5px 20px black inset !important;
+}
+#lateral{
+    float: left;
+    width: 30%;
+    border:1px solid blue;
+    min-height: 500px;
+    max-height: 1665px;
+    text-align: center; 
+   overflow-y: scroll;
+}
+#footer{
+    width: 100%;
+    height: 50px;
+    -padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    line-height: 50px;
+}

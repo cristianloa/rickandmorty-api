@@ -1,0 +1,147 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+#general{
+    width: 1200px;
+    border: 1px solid red;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background-color: goldenrod;
+}
+header h1{
+    color: green;
+    width: auto;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: greenyellow;
+    line-height: 50px;
+}
+#menu{
+    background-color: grey;
+    text-align: center;
+}
+#menu ul li{
+    display: inline-block;
+    padding: 10px;
+    border-left: 1px solid blue;
+    cursor: pointer;
+}
+#menu ul li:hover{
+    background-color: rgb(43, 228, 62);
+    transition: 0.3s;
+}
+#menu ul li a{
+    color: greenyellow;
+    display: block;
+}
+#menu ul li a:hover{
+    color: blue;
+    transition: 0.3s;
+}
+#principal{
+    width: 69%;
+    border: 1px solid green;
+    background: yellow;
+    float: left;
+}
+#sidebar{
+    width: 30%;
+    background-color: rebeccapurple;
+    float: left;
+}
+.cajas{
+    -float: left;
+    margin:1px 9%;
+    text-align: center;
+}
+.caja{
+    width: 300px;
+    height: 300px;
+    border: 2px solid red;
+    background-color: blue;
+    margin: 15px;
+    float: left;
+}
+.cajas .caja.caja2{
+    border-radius: 50%;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    line-height: 250px;
+    font-size: 50px;
+    animation-name: rodar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.animacion{
+
+}
+.animacion .animacion-caja{
+    width: 100px;
+    height: 100px;
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    -border: dashed 10px rgb(255, 0, 0);
+    -background-color: rgb(0, 0, 0);
+    margin: 10%;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 98px;
+    animation-name: desplazarce;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes desplazarce{
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+        font-size: 100px;
+    }
+    
+    50% {
+        margin-left: 750px;
+        margin-top: 0px;
+        transform: rotate(360deg);
+        font-size: 250px;
+    }
+    
+    100%{
+        margin-left: 0px;
+        font-size: 100px;
+        transform: rotate(0deg);
+        
+    }
+}
+
+@keyframes rodar{
+    0%{
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: 25px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+    
+}
+#footer{
+    width: 100%;
+    text-align: center;
+    color: rgb(37, 184, 187);
+    height: 100px;
+    background-color: red;
+    line-height: 80px;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}

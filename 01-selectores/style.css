@@ -16,7 +16,7 @@ a{
     color:green;
     text-decoration: none;
 }
-footer {
+footer a{
     color: red;
 }
 /*selector de  id*/
@@ -73,4 +73,20 @@ input[type="submit"]{
 }
 
 
-/*selectores de atributo*/
+/*selectores hijo*/
+#menu > li > a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+/*prioridad, cuanto mas especifico sea tendra mas prioridad = #saludo h1 | !important=maxima prioridad */
+#saludo h1{
+    background: cyan;
+}
+h1{
+    background: brown !important;
+}
+
+
+

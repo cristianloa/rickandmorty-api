@@ -1,0 +1,28 @@
+/* fuentes personalizadas */
+
+h1{
+    -font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik Vinyl', cursive;
+    font-style: italic;
+    /* colores */
+    
+        /* colores del sistema */
+    color: mediumpurple;
+        /* colores hexdecimales */
+    color: #cccccc;
+        /* colores RGB */
+    color:  rgb(255, 255, 107);
+        /* colores RGBA */
+    color: rgba(77, 120, 78, 0.8);
+}
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+}
+p{
+    font-family: sans-serif; 
+    font-size: 18px;
+    font-weight: bold;
+}
+

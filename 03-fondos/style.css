@@ -1,0 +1,41 @@
+body{
+    background: #ccc;
+    /* fondo-imagen (pattern) del fichero */
+    background-image:url("img/fondo.webp");
+    /* la imagen no se repite o se repite en el eje X o Y */
+    background-repeat: repeat;
+    /* TAMAÑO DE LA IMAGEN */
+    background-size: 100% 100%;
+    /* la imagen no se mueve */
+    background-attachment: fixed;
+    background-position: right bottom;
+    color: green;
+    /* texto justificado */
+    text-align: justify;
+    /* indentacion de texto */
+    text-indent: 10%;
+    /* espacio entre palabras */
+    word-spacing: 10px;
+    /* espacio entre letras */
+    letter-spacing: 5px;
+}
+#caja{
+    border: 5px solid green;
+    padding: 10px;
+    background-color: rgb(94, 131, 212);
+     color: wheat;
+     font-family: "Open Sans";
+     text-align: center;
+     line-height: 50px;
+     text-transform: uppercase;
+     text-decoration: line-through;
+     vertical-align: top;
+
+}
+h2{
+    color: yellow;
+    background: white;
+    background-image:url("img/fondo1.jpeg") ;
+    border: 5px solid green;
+}
+

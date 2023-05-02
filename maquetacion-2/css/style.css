@@ -1,0 +1,634 @@
+/* fuente */
+@font-face {
+    font-family: "TrebuchetMS";
+    src: url(fonts/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url(fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "WebSymbolsRegular";
+    src: url(fonts/websymbols-regular-webfont.eot);
+    src: url(fonts/websymbols-regular-webfont.eo#iefix) format('embedded-opentype'),
+        url(fonts/websymbols-regular-webfont.woff) format('woff'),
+        url(fonts/websymbols-regular-webfont.ttf) format('truetype'),
+        url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format('svg ');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Generales */
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    background: url(../img/pattern.png);
+}
+
+.wrap {
+    width: 1250px;
+    margin: 0px auto;
+}
+
+.gear {
+    font-family: 'WebSymbolsRegular';
+}
+
+/*cabecera*/
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-family: "BebasNeue";
+}
+
+#logo {
+    float: left;
+    width: 300px;
+    background-color: aqua;
+    text-align: center;
+    margin: 8px 0 0 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+#logo h3 {
+    font-size: 40px;
+}
+
+#logo:hover {
+    border-radius: 5px;
+    color: black;
+    background-color: #ccc;
+}
+
+
+#logo .gear {
+    display: block;
+    float: left;
+    font-size: 40px;
+    margin: 5px 0 0 26px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-gear {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#logo:hover .gear {
+    animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateX(-300%);
+
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+#logo h3 {
+    display: block;
+    float: right;
+    font-size: 40px;
+    margin: 5px 65px 0 0;
+    transition: 300ms;
+}
+
+#logo:hover h3 {
+    animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight {
+    from {
+        transform: translateX(200%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+/*menu cabecera*/
+#menu {
+    float: right;
+    height: 70px;
+    background: transparent;
+}
+
+#menu ul li {
+    font-size: 24px;
+    display: inline-block;
+    margin: 0 20px;
+    letter-spacing: 1px;
+    line-height: 70px;
+}
+
+#menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: all 200MS;
+}
+
+#menu ul li a:hover {
+    color: aqua;
+    transform: scale(1.2, 1.2);
+}
+
+/* BANNER */
+#banner {
+    width: 95%;
+    height: 100px;
+    background: url(../img/bakbaner.png);
+    background-position: -250px -200px;
+    border: solid white 10px;
+    padding: 5px;
+    box-shadow: 0px 0px 4px gray;
+    margin: 20px auto;
+    overflow: hidden;
+    animation: backBanner 10s;
+}
+
+@keyframes backBanner {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -200px -200px;
+    }
+}
+
+#banner h1 {
+    display: block;
+    color: white;
+    font-size: 50px;
+    font-family: "BebasNeue";
+    text-shadow: 1px 1px 4px black;
+    text-align: center;
+    line-height: 100px;
+    animation: showText 10s linear;
+}
+
+@keyframes showText {
+    0% {
+        transform: translateX(-600%) scale(5, 5);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(600%) scale(5, 5);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(-600%) scale(5, 5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%) scale(1, 1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
+}
+
+/* cards */
+.cards {
+    display: inline-block;
+
+}
+
+.card {
+    width: 205px;
+    box-shadow: 0px 0px 4px;
+    display: inline-block;
+    margin: 20px;
+    height: 305px;
+    background: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: black;
+    transition: all .5s;
+}
+
+
+.icon {
+    font-family: 'WebSymbolsRegular';
+}
+
+#cards .icon {
+    display: block;
+
+    font-size: 60px;
+    text-align: center;
+    margin: 50psx;
+    line-height: 110px;
+}
+
+.card:hover .icon {
+    font-size: 70px;
+    color: #00538c;
+    animation: showIcon 300ms linear;
+}
+
+.icon:hover {
+    font-size: 100px;
+}
+
+@keyframes showIcon {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.category {
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00538c;
+    font-family: "TrebuchetMS";
+    text-transform: initial;
+    text-align: center;
+}
+
+.card:hover .category {
+    color: white;
+    animation: showCategory 400ms linerar;
+}
+
+@keyframes showCategory {
+    from {
+        transform: translateY(-300%);
+        color: black;
+    }
+
+    to {
+        transform: translateY(0%);
+        color: white;
+    }
+}
+
+.description {
+    text-align: center;
+    color: #00538c;
+    font-family: "TrebuchetMS";
+}
+
+#content {
+    width: 100%;
+    margin-top: 100px;
+}
+
+/* principal */
+#principal {
+    width: 850px;
+}
+
+#principal h2 {
+    font-family: "BebasNeue";
+    font-size: 50px;
+    display: block;
+    background: url(../img/pxgray.png);
+    padding: 5px;
+    box-shadow: 5px 3px 5px gray;
+}
+
+/* barra lateral */
+#lateral {
+    clear: both;
+    min-height: 1200px;
+    width: 300px;
+    float: right;
+    top: 5px;
+}
+
+#lateral h3 {
+    font-family: "BebasNeue";
+    font-size: 30px;
+    height: 45px;
+    line-height: 45px;
+    display: block;
+    background: url(../img/pxgray.png);
+    padding: 0 15px;
+    box-shadow: 3px 3px 5px #393d3f;
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+#search {
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px inset;
+
+}
+
+#lateral input[type="text"] {
+    width: 85%;
+    height: 30px;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ccc;
+}
+
+#lateral input[type="button"] {
+    height: 30px;
+    border: none;
+    border-left: 1px solid #ccc;
+    background-color: transparent;
+    padding-left: 5px;
+    cursor: pointer;
+    color: #555;
+}
+
+#lateral #social a {
+    font-family: 'WebSymbolsRegular';
+
+}
+
+#social .overlay {
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background: #F4F7FE;
+    position: absolute;
+    padding: 5px;
+    margin-left: 70px;
+    margin-top: -52px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+#social div:hover .overlay {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.aside-box {
+    width: 85%;
+    height: 240px;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding-top: 2px;
+    background: white;
+    box-shadow: 1px 1px 5px gray;
+    border-radius: 5px;
+}
+
+#login input[type="email"],
+#login input[type="password"] {
+    display: block;
+    margin: 0px auto;
+    margin-top: 10px;
+    width: 80%;
+    height: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #ccc inset;
+    border-radius: 5px;
+    padding-left: 32px;
+    color: gray;
+}
+
+#login input[type="email"]:focus,
+#login input[type="password"]:focus {
+    color: #555;
+    box-shadow: 1px 1px 1px grey inset;
+}
+
+#login #user,
+#login #password {
+    display: block;
+    text-align: center;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+#login #password {
+    margin-top: 19px;
+    margin-left: 25px;
+}
+
+#login input[type="submit"],
+#login input[type="reset"] {
+    /* display: inline-block;
+    margin: 0px auto;
+    margin-top: 15px; */
+
+}
+
+#login a {
+    display: block;
+    text-decoration: none;
+    color: #393d3f;
+    padding: 0 20px;
+    padding-top: 10px;
+}
+
+#login input[type="submit"],
+#login input[type="button"],
+#login input[type="reset"],
+#login button {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    color: white;
+    background-color: rgb(42, 173, 238);
+    margin: 20px 10px;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Tre";
+
+}
+
+#social {}
+
+#social a {
+    /* font-size: 30px;
+    padding: 10px;
+    margin: 20px;
+    line-height: 50px;
+    color: #333;
+    text-decoration: none; */
+    display: flex;
+    justify-content: start;
+    font-size: 30px;
+    margin: 10px 10px 20px 20px;
+    text-decoration: none;
+}
+
+#patrocinadores {
+    width: 100%;
+}
+
+#principal .articulo {
+    border: 1px solid #555;
+    background-color: white;
+    margin-top: 50px;
+}
+
+#principal .articulo div {
+    margin: 15px;
+}
+
+#principal .articulo div h3 {
+    color: #00538c;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#principal .articulo div p {
+    font-size: 20px;
+}
+
+#principal .articulo div span {
+    position: relative;
+    color: #ccc;
+    background-color: #393d3f;
+    padding: 10px 15px;
+    top: -141px;
+    display: block;
+    width: 180px;
+    right: -622px;
+}
+
+#principal .articulo div a {
+    color: #00538c;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    position: relative;
+}
+
+#footer {
+    width: 100%;
+    height: 470px;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+
+#footer .wrap>div {
+    float: left;
+    width: 26%;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-family: "TrebuchetMS";
+}
+
+#footer a {
+    text-decoration: none;
+    color: #00538c;
+    transition: all 300ms;
+}
+
+#footer ul li {
+
+    border-bottom: 1px solid #ccc;
+}
+
+#footer ul li a:hover {
+    padding-left: 40px;
+    color: #ccc;
+    width: 100%;
+}
+
+#footer h5 {
+    display: block;
+    background: url('../img/pxgray.png'), white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: BebasNeue;
+    font-size: 40px;
+    line-height: 55px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#footer ul {
+    text-align: start;
+    margin: 20px;
+    letter-spacing: 1px;
+}
+
+#footer ul li {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#location iframe {
+    width: 100%;
+    border-radius: 5px;
+    height: 280px;
+}
+
+#info p img {
+    margin-bottom: 10px;
+}
+
+#info a img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+/* respomsive */
