@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta name="color-scheme" content="light">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+            <div class="logo">
+                <h1>PORTAFOLIO</h1>
+            </div>
+            <nav id="menu">
+                <ul id="nav">
+                    <li class="item1"><a href="">inicio</a></li>
+                    <li class="item2"><a href="">proyectos</a></li>
+                    <li class="item3"><a href="">blog</a></li>
+                    <li class="item4"><a href="">contacto</a></li>
+                </ul>
+            </nav>
+            <div>
+                <select id="themeSelect" onchange="switchTheme()">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+
+        </header>
+        <section id="section">
+            <aside id="sidebar">
+                <h2>¿Que quieres ver?</h2>
+                <nav>
+                    <ul>
+                        <li><a href="">WEBS</a> </li>
+                        <li><a href="">APPS</a> </li>
+                        <li><a href="">DIEÑOS</a> </li>
+                        <li><a href="">OTROS</a> </li>
+                    </ul>
+                </nav>
+
+            </aside>
+            <div class="content">
+                <div class="cajas">
+                    <div class="caja">
+                        <div class="imgCaja">
+                            <img src="http://via.placeholder.com/250x180" alt="">
+                        </div>
+                        <div class="infoCaja">
+                            <a href="#">Nombre Proyecto</a>
+                            <p>Sitio Web</p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="imgCaja">
+                            <img src="http://via.placeholder.com/250x180" alt="">
+                        </div>
+                        <div class="infoCaja">
+                            <a href="#">Nombre Proyecto</a>
+                            <p>Sitio Web</p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="imgCaja">
+                            <img src="http://via.placeholder.com/250x180" alt="">
+                        </div>
+                        <div class="infoCaja">
+                            <a href="#">Nombre Proyecto</a>
+                            <p>Sitio Web</p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="imgCaja">
+                            <img src="http://via.placeholder.com/250x180" alt="">
+                        </div>
+                        <div class="infoCaja">
+                            <a href="#">Nombre Proyecto</a>
+                            <p>Sitio Web</p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="imgCaja">
+                            <img src="http://via.placeholder.com/250x180" alt="">
+                        </div>
+                        <div class="infoCaja">
+                            <a href="#">Nombre Proyecto</a>
+                            <p>Sitio Web</p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="imgCaja">
+                            <img src="http://via.placeholder.com/250x180" alt="">
+                        </div>
+                        <div class="infoCaja">
+                            <a href="#">Nombre Proyecto</a>
+                            <p>Sitio Web</p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="imgCaja">
+                            <img src="http://via.placeholder.com/250x180" alt="">
+                        </div>
+                        <div class="infoCaja">
+                            <a href="#">Nombre Proyecto</a>
+                            <p>Sitio Web</p>
+                        </div>
+                    </div>
+                    <div class="caja">
+                        <div class="imgCaja">
+                            <img src="http://via.placeholder.com/250x180" alt="">
+                        </div>
+                        <div class="infoCaja">
+                            <a href="#">Nombre Proyecto</a>
+                            <p>Sitio Web</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <footer id="footer">
+            <div class="logo-footer">
+                <h1>PORTAFOLIO</h1>
+
+            </div>
+            <div class="info-footer">
+                <p>Master en CSS - <a href="cristianloa.com">Cristian Loa WEB &copy;</a></p>
+            </div>
+
+        </footer>
+    </div>
+
+
+
+    <script>
+        function switchTheme() {
+            const theme = document.getElementById("themeSelect").value;
+            document.querySelector("meta[name='color-scheme']").content = theme;
+            document.body.classList.toggle("dark-mode", theme === "dark");
+        }
+    </script>
+
+</body>
+
+</html>
